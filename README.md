@@ -55,16 +55,16 @@ streamlit run app.py
 
 ## Technical Overview
    ### MongoDB Integration
-        - Purpose: MongoDB stores embeddings for beauty products, allowing efficient query processing based on user prompts.
-        - Search: Employs a vector-based search pipeline to find the most relevant product matches.
+         Purpose: MongoDB stores embeddings for beauty products, allowing efficient query processing based on user prompts.
+         Search: Employs a vector-based search pipeline to find the most relevant product matches.
    ### Generative AI Components
-        - Google Generative AI (Gemini): Provides contextually rich explanations and personalized recommendations.
-        - Sentence Transformers: Generates embeddings from user prompts for precise and effective matching.
+        Google Generative AI (Gemini): Provides contextually rich explanations and personalized recommendations.
+        Sentence Transformers: Generates embeddings from user prompts for precise and effective matching.
 
 
 
 ## Contributing
-    - Fork the Repository: Create a copy of this repository in your GitHub account.
-    - Create a New Branch: Work on your changes in a new branch.  
-    - Make Changes and Test: Implement your changes and thoroughly test them
-    - Submit a Pull Request: Submit your changes for review via a pull request.
+     Fork the Repository: Create a copy of this repository in your GitHub account.
+     Create a New Branch: Work on your changes in a new branch.  
+     Make Changes and Test: Implement your changes and thoroughly test them
+     Submit a Pull Request: Submit your changes for review via a pull request.
