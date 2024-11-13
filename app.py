@@ -7,7 +7,7 @@ import urllib.parse
 
 # Streamlit App Title and Description
 st.title("🌟 AccessMate 🌟")
-st.title("|| Intelligent Recommendation System ||")
+st.title("|| Intelligent Beauty Product Recommendation System ||")
 st.write("Enter a prompt to get personalized recommendations for Product, Catalog, or SEO needs. Discover the best options tailored for you!")
 
 # Sidebar for Prompt History
@@ -23,8 +23,7 @@ if st.session_state.prompt_history:
             st.write(f"**Response**: {hist_response}")
 
 # Set up MongoDB client
-
-encoded_password = urllib.parse.quote_plus('password')
+encoded_password = urllib.parse.quote_plus(st.secrets['password'] )
 uri = st.secrets['mongo_uri']
 client = MongoClient(uri)
 db = client["cosmetic_app_db"]
