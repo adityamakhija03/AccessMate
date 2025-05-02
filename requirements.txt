@@ -1,4 +1,12 @@
-streamlit
-google.generativeai
-pymongo
-sentence_transformers
+# streamlit
+# google.generativeai
+# pymongo
+# sentence_transformers
+
+
+
+streamlit>=1.32.0
+google-generativeai>=0.3.0
+pymongo>=4.5.0
+sentence-transformers>=2.2.2
+torch>=2.0.0
