@@ -34,7 +34,7 @@ genai.configure(api_key= st.secrets['api'])
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Load the Sentence Transformer Model
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+embedding_model = SentenceTransformer("paraphrase-distilroberta-base-v1")
 
 # Select category and enter prompt
 category = st.selectbox("Select a category:", ["Product Recommendation"])
