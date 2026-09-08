@@ -1,12 +1,12 @@
 # 🌟 AccessMate 🌟
 ## Intelligent Beauty Product Recommendation System
 
-AccessMate is a personalized recommendation platform that uses AI to provide tailored beauty product recommendations. By entering a prompt, users can receive suggestions for products, catalogs, or SEO needs based on their input. This application leverages Google Gemini, MongoDB, and state-of-the-art sentence embeddings for accurate recommendations.
+AccessMate is a personalized recommendation platform that uses AI to provide tailored beauty product recommendations. By entering a prompt, users can receive suggestions for products, catalogs, or SEO needs based on their input. This application leverages Google Gemini, ChromaDB, and state-of-the-art sentence embeddings for accurate recommendations.
 
 ### Features
 - **Prompt-Based Recommendations**: Enter a prompt to receive personalized beauty product suggestions.
 - **Generative AI Support**: Utilizes Google Gemini AI for reasoning and enhanced product recommendations.
-- **Embedding-Based Search**: Fast and accurate recommendations powered by the `all-MiniLM-L6-v2` model and MongoDB vector search.
+- **Embedding-Based Search**: Fast and accurate recommendations powered by the `all-MiniLM-L6-v2` model and ChromaDB vector search.
 - **Prompt History**: View up to 5 previous prompts and their responses in the sidebar for quick reference.
 
 ## Installation
@@ -14,7 +14,7 @@ AccessMate is a personalized recommendation platform that uses AI to provide tai
 ### Prerequisites
 - Python 3.7+
 - [Streamlit](https://streamlit.io/)
-- [MongoDB](https://www.mongodb.com/)
+- [ChromaDB](https://www.trychroma.com/)
 - [Google Generative AI SDK](https://developers.google.com/)
 - [Sentence Transformers](https://www.sbert.net/)
 
@@ -32,8 +32,9 @@ pip install -r requirements.txt
 ### Configure Secrets
 Add a .streamlit/secrets.toml file with the following structure:
  ```bash
-uri = "your_mongo_uri"
-password = "your_mongo_password"
+Chroma API key
+Tenant
+Database
 api = "your_google_generative_ai_api_key"
  ```
 
@@ -54,9 +55,9 @@ streamlit run app.py
 
 
 ## Technical Overview
-   ### MongoDB Integration
-         Purpose: MongoDB stores embeddings for beauty products, allowing efficient query processing based on user prompts.
-         Search: Employs a vector-based search pipeline to find the most relevant product matches.
+   ### ChromaDB Integration
+        Purpose: Stores beauty product embeddings for efficient vector retrieval.
+        Search: Uses vector similarity search to retrieve relevant products based on user prompts.
    ### Generative AI Components
         Google Generative AI (Gemini): Provides contextually rich explanations and personalized recommendations.
         Sentence Transformers: Generates embeddings from user prompts for precise and effective matching.
